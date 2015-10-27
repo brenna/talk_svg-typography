@@ -1,0 +1,360 @@
+  /**
+ * Black theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Syncopate:700);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:900);
+@import url(https://fonts.googleapis.com/css?family=Limelight);
+
+
+// Override theme settings (see ../template/settings.scss)
+
+$blue: #64C7CC;
+$blueDark: #128B98;
+
+$backgroundColor: #111;
+
+//$mainFont: 'Open Sans', sans-serif;
+$linkColor: $blue;
+$linkColorHover: lighten( $linkColor, 7% );
+$headingFont: 'Lato', sans-serif;
+$headingTextShadow: none;
+$heading1TextShadow: $headingTextShadow;
+$headingLetterSpacing: -0.01em;
+$headingLineHeight: 1;
+$headingTextTransform: none;
+$selectionBackgroundColor: $blueDark;
+$mainFontSize: 50px;
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+// Brenzone overrides  -------------------------
+
+.reveal {
+  .slides {
+    text-align: left;
+  }
+
+  h1 {
+    -moz-hyphens: none;
+    font-size: 3.3em;
+    letter-spacing: 0;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  h1.shadow {
+    text-shadow: 0 0 10px rgba(0,0,0,0.4);
+  }
+
+  h1.main,
+  h2.main,
+  {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2.8em;
+    line-height: 1.1;
+  }
+
+  h1 .kern {
+    letter-spacing: 0.1em;
+  }
+
+  .no-caps {
+    text-transform: none;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1.1;
+  }
+
+  h1,h2 {
+    code {
+      text-transform: none;
+    }
+  }
+
+  h2 a {
+    color: #fff !important;
+  }
+
+  h3, h4, h5, h6 {
+    margin-bottom: 0.6em;
+  }
+
+  h4 {
+    font-size: 1.4em;
+  }
+
+  p {
+    margin-bottom: 0.5em;
+  }
+
+  .strike {
+    text-decoration: line-through;
+  }
+
+  .left {
+    text-align: left;
+  }
+
+  a:not(.image) {
+    color: #fff;
+    border-bottom: solid 1px #dedede;
+
+    &:hover {
+      color: #dedede;
+      border-bottom: solid 1px #dedede;
+    }
+  }
+
+  a.blue:not(.image){
+    color: $blue;
+    border-bottom: none;
+
+    &:hover {color: $linkColorHover;}
+  }
+
+  a.left {
+    display: block;
+  }
+
+  a.ref,
+  p.ref {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .credit {
+    position: absolute;
+    bottom: 35px;
+    right: 0;
+    display: inline-block;
+    margin: 0;
+    padding: 20px;
+    background: #000;
+  }
+
+  a.credit {
+    border-bottom: none;
+    &:hover {border-bottom: none;}
+  }
+
+  a.coverpage,
+  p.coverpage {
+    color: lighten($blue, 10);
+  }
+
+  .main-credit {
+    font-size: 30px;
+  }
+
+  .bottomless {
+    margin-bottom: 0;
+  }
+
+  .small {
+    font-size: 25px;
+  }
+
+  .tiny {
+    font-size: 20px;
+  }
+
+  .centered {
+    text-align: center;
+  }
+
+  h3 sup {
+    font-size: 0.7em;
+  }
+
+  img.naked {
+    border: none;
+    box-shadow: none;
+    background: none;
+    margin: 0;
+  }
+
+  img.middle {vertical-align: middle;}
+
+  .has-bullet {
+    position: relative;
+    padding-left: 60px;
+
+    .bullet {
+      position: absolute;
+      left: 0;
+      top: 24px;
+    }
+
+    &--large {
+      padding-left: 110px;
+
+      .bullet {
+        top: 10px;
+        font-size: 70px;
+      }
+    }
+  }
+}
+
+.img-bg {
+  .slide-background {
+    -webkit-filter: opacity(0.4);
+  }
+
+  h1 {
+    text-shadow: 0 0 10px rgba(0,0,0,0.4);
+  }
+}
+
+code[contenteditable]:focus {
+  outline: none;
+}
+
+//layout
+.clear {
+  clear: both;
+  float: none;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.reveal section {
+  height: 100%;
+}
+
+.reveal pre {
+  width: 100%;
+
+  code {
+    max-height: 410px;
+  }
+
+  &.inline {
+    code{
+      text-align: left;
+      display: inline-block;
+      padding-right: 2em;
+    }
+  }
+}
+
+
+.half {
+  float: left;
+  width: 44%;
+  &:nth-of-type(2n-1) {
+    margin-right: 8%;
+  }
+
+  &.close {
+    width: 48%;
+
+    &:nth-of-type(2n-1) {
+      margin-right: 2%;
+    }
+  }
+}
+
+.quarter {
+  float: left;
+  width: 25%;
+  // margin: 3%;
+}
+
+.reveal .two-thirds {
+  float: left;
+  width: 63.7%;
+  margin-left: 3%;
+}
+
+.third {
+  float: left;
+  width: 33.3%;
+}
+
+
+/*****************************************
+* presentation specific styles
+*****************************************/
+
+.agree-button {
+    background: #fff;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 4px;
+    vertical-align: text-top;
+    position: relative;
+    top: -20px;
+}
+
+.svg-example {
+  svg {
+    border:solid 1px #555;
+  }
+}
+
+.count-watermark {
+  position: absolute;
+  fill: darken($blue, 17);
+  top: 0;
+  right: -90px;
+  // left: -90px;
+  height: 850px;
+  z-index: -1;
+}
+
+//list of tags/attrs
+.summary-list {
+  width: 33%;
+  float: left;
+  font-size: 27px !important;
+
+  + .summary-list {
+    width: 66%;
+
+    &--long {
+      columns: 2;
+    }
+  }
+
+  &--all {
+    width: 100%;
+    columns: 4;
+    font-size: 21px !important;
+
+    p {color: #929292;}
+    p.highlight {color: #fff;}
+  }
+
+  &--all-attrs {
+    columns: 7;
+    font-size: 11px !important;
+  }
+}

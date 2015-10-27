@@ -1,0 +1,109 @@
+/*
+  IR_Black style (c) Vasily Mikhailitchenko <vaskas@programica.ru>
+*/
+
+pre code {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #000;
+  color: #f8f8f8;
+  -webkit-text-size-adjust: none;
+}
+
+pre .shebang,
+pre .comment,
+pre .javadoc {
+  color: #7c7c7c;
+}
+
+pre .keyword,
+pre .tag,
+.tex pre .command,
+pre .request,
+pre .status,
+.clojure pre .attribute {
+  color: #96cbfe;
+}
+
+pre .sub pre .keyword,
+.method,
+pre .list pre .title,
+.nginx pre .title {
+  color: #ffffb6;
+}
+
+pre .string,
+pre .tag pre .value,
+pre .cdata,
+pre .filter pre .argument,
+pre .attr_selector,
+.apache pre .cbracket,
+pre .date,
+.coffeescript pre .attribute {
+  color: #a8ff60;
+}
+
+pre .subst {
+  color: #daefa3;
+}
+
+pre .regexp {
+  color: #e9c062;
+}
+
+pre .title,
+pre .sub pre .identifier,
+pre .pi,
+pre .decorator,
+.tex pre .special,
+pre .type,
+pre .constant,
+.smalltalk pre .class,
+pre .javadoctag,
+pre .yardoctag,
+pre .phpdoc,
+pre .dartdoc,
+.nginx pre .built_in {
+  color: #ffffb6;
+}
+
+pre .symbol,
+.ruby pre .symbol pre .string,
+pre .number,
+pre .variable,
+.vbscript,
+pre .literal {
+  color: #c6c5fe;
+}
+
+.css pre .tag {
+  color: #96cbfe;
+}
+
+.css pre .rules pre .property,
+.css pre .id {
+  color: #ffffb6;
+}
+
+.css pre .class {
+  color: #fff;
+}
+
+pre .hexcolor {
+  color: #c6c5fe;
+}
+
+pre .number {
+  color:#ff73fd;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex pre .formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml pre .cdata {
+  opacity: 0.7;
+}

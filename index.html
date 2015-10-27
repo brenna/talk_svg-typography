@@ -1,0 +1,1554 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Creative Typography with SVG</title>
+
+	<meta name="description" content="Responsive type treatments with the SVG &lt;text&gt; element">
+	<meta name="author" content="Brenna O'Brien">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<link rel="stylesheet" href="css/reveal.min.css">
+	<link rel="stylesheet" href="css/theme/brenzone.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/tomorrow-night-bright.css">
+
+	<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+	<script>
+		if( window.location.search.match( /print-pdf/gi ) ) {
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = 'css/print/pdf.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		}
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+<div class="reveal">
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+
+<section>
+	<h1 class="main">Creative Typography with <strong>SVG</strong></h1>
+  <br>
+  <br>
+  <div class="half">
+    <p class="main-credit"><span class="name">Brenna O'Brien</span> / <a  href="http://twitter.com" target="_blank" class="blue">@brnnbrn</a></p>
+    <p class="main-credit"><span class="name">front-end engineer</span> / &nbsp;<a href="http://ted.com" target="_blank" class="blue"><img class="naked" src="img/logo-ted.png" width="60px"></a></p>
+  </div>
+  <div class="half" style="text-align: right;">
+    <br>
+    <p class="main-credit">#SVGType</p>
+  </div>
+</section>
+
+<section data-background="#BE1637">
+   <h1 class="main"><strong>These 8 Weird SVG Tricks Will Totally blow your mind</strong></h1>
+ </section>
+
+ <section>
+  <h1 class="main">You might also learn a lot about SVG</h1>
+ </section>
+
+<!-- ===============================================
+  ::SVG 101
+================================================ -->
+
+<section data-background="#008B9A">
+  <h1>SVG101</h1>
+</section>
+
+<section>
+  <div id="svg101" style="width: 200px; display: inline-block; vertical-align:middle"></div> <span style="font-size:200px; vertical-align:middle">&nbsp;=</span>
+  <pre><code contenteditable class="liveCoding xml" data-livecoding-id="svg101" style="max-height: 530px;">
+
+  <svg viewBox="0 0 100 100">
+    &lt;path fill="#BE1637" stroke="#fff"
+      d="M96.333,18.385c-2.396-6.01-7.205-11.064-13.857-14.194
+      C76.595,1.423,70.26,1.09,64.501,2.782
+      C58.743,4.472,53.566,9.081,50,14.408
+      c-3.565-5.327-8.743-9.936-14.5-11.626
+      C29.743,1.09,23.406,1.423,17.526,4.191
+      c-6.652,3.128-11.46,8.184-13.858,14.194
+      c-2.396,6.01-2.407,12.987,0.614,19.927
+      C10.743,53.154,49.795,87.993,50,88.588
+      c0.205-0.595,39.258-35.434,45.718-50.276
+      C98.74,31.371,98.729,24.395,96.333,18.385z" /&gt;
+  </svg>
+  </code></pre>
+</section>
+
+<section>
+  <h1>V.R.E.A.M</h1>
+  <br>
+  <h3>viewBox Rules<br> Everything Around Me</h3>
+</section>
+
+<section>
+  <style>
+    .hover-heart:hover {
+      fill: #fff;
+    }
+  </style>
+  <h3 class="has-bullet">
+    <svg class="bullet" viewBox="0 -4.831 100 100" width="50" ><path  class="hover-heart" fill="#BE1637" d="M98.2,17.305c-2.493-6.252-7.495-11.51-14.416-14.766C77.667-0.34,71.076-0.686,65.085,1.073  C59.096,2.832,53.71,7.626,50,13.168C46.291,7.626,40.905,2.832,34.916,1.073S22.334-0.34,16.217,2.539  C9.297,5.794,4.295,11.053,1.801,17.305c-2.493,6.252-2.504,13.511,0.638,20.73C9.161,53.477,49.787,89.719,50,90.338  c0.213-0.619,40.84-36.861,47.561-52.303C100.705,30.815,100.693,23.557,98.2,17.305z"/></svg>
+    resolution independent
+  </h3>
+  <br>
+  <div class="fragment has-bullet">
+    <h3>
+      <svg class="bullet" viewBox="0 -4.831 100 100" width="50"><path class="hover-heart" fill="#BE1637" d="M98.2,17.305c-2.493-6.252-7.495-11.51-14.416-14.766C77.667-0.34,71.076-0.686,65.085,1.073  C59.096,2.832,53.71,7.626,50,13.168C46.291,7.626,40.905,2.832,34.916,1.073S22.334-0.34,16.217,2.539  C9.297,5.794,4.295,11.053,1.801,17.305c-2.493,6.252-2.504,13.511,0.638,20.73C9.161,53.477,49.787,89.719,50,90.338  c0.213-0.619,40.84-36.861,47.561-52.303C100.705,30.815,100.693,23.557,98.2,17.305z"/></svg>
+      easy to manipulate with CSS & JS
+    </h3>
+    <pre class="inline"><code>
+  .heart:hover {
+    fill: #fff;;
+  }
+      </code></pre>
+  </div>
+  <br>
+  <h3 class="fragment has-bullet">
+    <svg class="bullet" viewBox="0 -4.831 100 100" width="50" ><path  class="hover-heart" fill="#BE1637" d="M98.2,17.305c-2.493-6.252-7.495-11.51-14.416-14.766C77.667-0.34,71.076-0.686,65.085,1.073  C59.096,2.832,53.71,7.626,50,13.168C46.291,7.626,40.905,2.832,34.916,1.073S22.334-0.34,16.217,2.539  C9.297,5.794,4.295,11.053,1.801,17.305c-2.493,6.252-2.504,13.511,0.638,20.73C9.161,53.477,49.787,89.719,50,90.338  c0.213-0.619,40.84-36.861,47.561-52.303C100.705,30.815,100.693,23.557,98.2,17.305z"/></svg>
+    great for icons and logos
+  </h3>
+</section>
+
+<!-- ===============================================
+  ::text in svg::
+================================================ -->
+
+<section data-background="#008B9A">
+  <h1>Let's talk about <code>&lt;text&gt;</code><br> baby</h1>
+</section>
+
+<section>
+  <h1><code>&lt;text&gt;</code><br> is accessible</h1>
+</section>
+
+<!-- <section>
+  <h1>text in SVG</h1>
+  <br>
+  <h3><code>&lt;text&gt;</code></h3>
+  <h3 class="fragment">convert text to paths</h3>
+</section>
+
+<section>
+  <h1><code>&lt;text&gt;</code><br> vs. <br> paths</h1>
+</section>
+
+<section>
+  <h2>stick with <code>&lt;text&gt;</code></h2>
+  <h2>except for:</h2>
+  <br>
+  <h3 class="fragment">additional fonts</h3>
+  <h3 class="fragment">morphing glyphs</h3>
+</section> -->
+
+<section>
+  <h2><code>&lt;text&gt;</code>101</h2>
+  <br>
+  <div id="text101" style="width: 700px;" class="svg-example"></div>
+  <pre><code contenteditable class="liveCoding xml" data-livecoding-id="text101" style="max-height: 530px;">
+  <svg viewBox="0 0 600 100">
+    <text y="1em" fill="tomato" font-size="80">CSS Dev Conf</text>
+  </svg>
+  </code></pre>
+</section>
+
+<section>
+  <h2><code>&lt;text&gt;</code>101</h2>
+  <br>
+  <ul>
+    <li><h3>watch out for <code>y=0</code> default</h3></li>
+    <li><h3>no automatic line breaks</h3></li>
+  </ul>
+  <aside class="notes">
+    * just like the svg we're used to but instead of a path or a shape, we're rendering text
+    * fill and stroke as you would expect
+    * inherits font-family and sizing but turns px into SVG units
+    * positioning with x & y, as you would expect, but watch out for y
+  </aside>
+</section>
+
+ <!-- ===============================================
+  1. custom text lockups
+================================================ -->
+
+<section data-background="#008B9A">
+  <svg viewBox="0 0 80 100" class="count-watermark">
+    <text font-size="130" y="95">1</text>
+  </svg>
+  <h1>typo-<br> graphic<br> lock-up</h1>
+  <aside class="notes">
+    lack of line breaking can be to your advantage when you want to control lettering precisely
+  </aside>
+</section>
+
+<section data-background-image="img/text-what-is-love.png" data-background-size="contain">
+  <a class="ref credit" href="http://codepen.io/brenna/full/raOBaw/" target="_blank">http://codepen.io/brenna/full/raOBaw/</a>
+</section>
+
+<section>
+  <h2>Let's talk about...</h2>
+  <br>
+  <ul>
+    <li><h3><code>&lt;tspan&gt;</code></h3></li>
+    <li><h3><code>textLength</code></h3></li>
+    <li><h3><code>lengthAdjust</code></h3></li>
+  </ul>
+</section>
+
+<!-- <section>
+<h3><code>&lt;tspan&gt;</code></h3>
+  <div id="basicTspan" class="svg-example"></div>
+  <pre><code contenteditable class="liveCoding xml" data-livecoding-id="basicTspan">
+  <svg viewBox="0 0 200 50" class="what-is-love">
+    <text>
+      <tspan x="0" y="1em">What is</tspan>
+      <tspan x="0" dy="1em">love</tspan>
+    </text>
+  </svg>
+  </code></pre>
+</section> -->
+
+<section>
+  <h2><code>&lt;tspan&gt;</code></h2>
+  <br>
+  <ul>
+    <li><h4>similar to HTML <code>&lt;span&gt;</code></h4></li>
+    <li><h4>absolute positioning with <code>x</code> & <code>y</code></h4></li>
+    <li><h4>relative positioning with <code>dx</code> & <code>dy</code></h4></li>
+  </ul>
+</section>
+
+<section>
+  <style>
+    .what-is-love svg {
+      fill: #fff;
+      text-transform: uppercase;
+    }
+  </style>
+  <h3>typographic lock-up</h3>
+  <div id="textLength" class="svg-example what-is-love"></div>
+  <pre><code contenteditable class="liveCoding xml" data-livecoding-id="textLength">
+  <svg viewBox="0 0 200 50">
+    <text font-size="20">
+      &lt;tspan textLength="80" x="0" y="1em"
+        lengthAdjust="spacing"&gt;What is&lt;/tspan&gt;
+      &lt;tspan textLength="80" x="0" dy="1em"
+        lengthAdjust="spacingAndGlyphs"&gt;love&lt;/tspan&gt;
+    </text>
+  </svg>
+  </code></pre>
+</section>
+
+<section>
+  <h3>typographic lock-up</h3>
+  <div id="font-size" class="svg-example what-is-love"></div>
+  <pre><code contenteditable class="liveCoding xml" data-livecoding-id="font-size">
+  <svg viewBox="0 0 200 50">
+    <text font-size="20">
+      &lt;tspan textLength="80" x="0" y="1em"
+        font-size="20" &gt;What is&lt;/tspan&gt;
+      &lt;tspan textLength="80" x="0" dy="0.9em"
+        font-size="30" font-weight="bold" &gt;love&lt;/tspan&gt;
+    </text>
+  </svg>
+  </code></pre>
+</section>
+
+<section>
+  <h3>CSS can set most attributes</h3>
+  <div id="css-attrs" class="svg-example what-is-love"></div>
+  <div class="third">
+    <pre><code class="liveCoding css" contenteditable data-livecoding-id="css-attrs">
+  .love {
+    fill: #FF6666;
+  }
+    </code> </pre>
+  </div>
+
+  <div class="two-thirds">
+    <pre><code contenteditable class="liveCoding xml" data-livecoding-id="css-attrs">
+  <svg viewBox="0 0 200 50">
+    <text font-size="20">
+      &lt;tspan textLength="80" x="0" y="1em"
+        font-size="20" &gt;What is&lt;/tspan&gt;
+      &lt;tspan class="love" textLength="80" x="0" dy="0.9em"
+        font-size="30" font-weight="bold" &gt;love&lt;/tspan&gt;
+    </text>
+  </svg>
+    </code></pre>
+  </div>
+</section>
+
+<!-- <section>
+  <h2>SVG type lock-up</h2>
+  <br>
+  <ul>
+    <li><p><code>&lt;tspan&gt;</code>, works like <code>&lt;span&gt;</code></p></li>
+    <li><p>absolute and relative positioning with <code>x</code>, <code>y</code>, <code>dx</code> & <code>dy</code></p></li>
+    <li><p>spacing and sizing with <code>textLength</code> &<br> <code>font-size</code></p></li>
+    <li><p>class any SVG element for custom CSS</p></li>
+  </ul>
+</section> -->
+
+<section>
+  <h1>RESPONSIVE TEXT!</h1>
+  <img src="img/responsive-text.gif" alt="" width="600">
+</section>
+
+<section data-background="img/rwd.gif">
+  <h1>responsive SVG</h1>
+  <br>
+  <h3>viewBox + flexible container</h3>
+</section>
+
+<section data-background-image="img/fitter-happier-text.png" data-background-color="#f40" data-background-size="contain">
+  <a href="http://jxnblk.com/fitter-happier-text/" class="credit ref">Fitter, Happier, Text</a>
+</section>
+
+<!-- ===============================================
+  2. curved text
+================================================ -->
+
+<section data-background="#008B9A">
+  <svg viewBox="0 0 80 100" class="count-watermark">
+    <text font-size="130" y="95">2</text>
+  </svg>
+  <h1>curved<br> text</h1>
+</section>
+
+<section>
+  <h2>Let's talk about...</h2>
+  <br>
+  <ul>
+    <li><h3><code>&lt;textPath&gt;</code></h3></li>
+    <li><h3><code>alignment-baseline</code></h3></li>
+    <li><h3><code>&lt;defs&gt;</code></h3></li>
+  </ul>
+</section>
+
+<section data-background-image="img/text-path.png" data-state="img-bg">
+  <h2><code>&lt;textPath&gt;</code></h2>
+  <br>
+  <h3>set text along an arbitrary path</h3>
+</section>
+
+<section>
+  <style>
+    .are-you-afraid svg {
+      font-family: 'Merriweather', serif;
+      font-weight: 900;
+    }
+  </style>
+  <h3>curved text with <code>&lt;textPath&gt;</code></h3>
+  <div id="curvedText" class="are-you-afraid" style="width: 700px"></div>
+  <pre><code contenteditable class="liveCoding xml" data-livecoding-id="curvedText" >
+  <svg viewBox="0 50 500 150">
+    &lt;path id="arc" stroke="red" d="M82.372,165.969 c44.126-35.084,60.236-50.782,150.325-50.782s131.802,28.198,158.194,62.77" /&gt;
+    &lt;text fill="#5D509D" width="500"&gt;
+      &lt;textPath alignment-baseline="middle" xlink:href="#arc" font-size="44"  dy="100"&gt;
+        Are You Afraid
+      &lt;/textPath&gt;
+    &lt;/text&gt;
+  </svg>
+  </code></pre>
+</section>
+
+<section data-background="img/trusty-steed.jpg" data-state="img-bg">
+  <h2><code>&lt;defs&gt;</code></h2>
+  <br>
+  <ul>
+    <li><h3>where you define re-usable SVG components</h3></li>
+    <li><h3>a trusty steed as we combine SVG techniques</h3></li>
+  </ul>
+</section>
+
+<section>
+  <h3>curved text with <code>&lt;textPath&gt;</code></h3>
+  <div id="textPathDefs" class="are-you-afraid" style="width: 600px; margin-top: -80px"></div>
+  <pre><code contenteditable class="liveCoding xml" data-livecoding-id="textPathDefs"style="max-height: 300px; margin-top: -20px" >
+  <svg class="are-you-afraid" viewBox="0 0 475 300">
+    <defs>
+     <path id="arc" d="M82.372,165.969 c44.126-35.084,60.236-50.782,150.325-50.782s131.802,28.198,158.194,62.77" />
+    </defs>
+    <text fill="#5D509D" width="500">
+      &lt;textPath xlink:href="#arc" font-size="44"  dy="100"&gt;
+        Are You Afraid
+      &lt;/textPath&gt;
+      <tspan dy="10" x="50%" text-anchor="middle" font-size="44">of the</tspan>
+      <tspan dy="1em" x="50%" text-anchor="middle" font-size="75">Dark?</tspan>
+    </text>
+  </svg>
+  </code></pre>
+</section>
+
+
+
+<!-- ===============================================
+ gradient text
+================================================ -->
+<section data-background="#008B9A">
+  <svg viewBox="0 0 80 100" class="count-watermark">
+    <text font-size="130" y="95">3</text>
+  </svg>
+  <h1>text<br> filled<br>  with gradients</h1>
+</section>
+
+<section>
+  <h1>smell ya later</h1> <h2><code>-webkit-background-clip: text;</code></h2>
+</section>
+
+<section>
+  <h2>Let's talk about ...</h2>
+  <br>
+  <ul>
+    <li><h3><code>&lt;linearGradient&gt;</code></h3></li>
+    <li><h3><code>&lt;radialGradient&gt;</code></h3></li>
+    <li><h3><code>gradientUnits</code></h3></li>
+  </ul>
+</section>
+
+<section>
+  <h3>&lt;linearGradient&gt;</h3>
+  <svg viewBox="0 0 100 100" width="300px">
+    <defs id="linearGradient"></defs>
+    <rect fill="url(#fire)" x="0" y="0" width="100" height="100">
+  </svg>
+
+  <pre><code class="liveCoding xml" contenteditable data-livecoding-id="linearGradient">
+  &lt;linearGradient id="fire" x1="0" y1="0" x2="100%" y2="100%"&gt;
+    &lt;stop stop-color="hotpink" offset="0%"/&gt;
+    &lt;stop stop-color="goldenrod" offset="100%"/&gt;
+  &lt;/linearGradient&gt;
+  </code></pre>
+</section>
+
+<section>
+  <h3>&lt;radialGradient&gt;</h3>
+  <svg viewBox="0 0 100 100" width="300px">
+    <defs id="radialGradient"></defs>
+    <rect fill="url(#ring-of-fire)" x="0" y="0" width="100" height="100">
+  </svg>
+  <pre><code class="liveCoding xml" contenteditable data-livecoding-id="radialGradient">
+  &lt;radialGradient id="ring-of-fire" cx="50%" cy="50%" r="40"
+    gradientUnits="userSpaceOnUse"&gt;
+    &lt;stop stop-color="hotpink" offset="0%"/&gt;
+    &lt;stop stop-color="goldenrod" offset="100%"/&gt;
+  &lt;/radialGradient&gt;
+  </code></pre>
+</section>
+
+<section>
+  <h2><code>gradientUnits</code></h2>
+  <br>
+  <ul>
+    <li><h4><code>userSpaceOnUse</code><br> = absolute</h4></li>
+    <li><h4><code>objectBoundingBox</code><br> = object relative</h4></li>
+  </ul>
+  <br>
+  <p>see also:<br> <code>clipPathUnits</code>, <code>maskUnits</code>, <code>patternUnits</code></p>
+  <a href="http://sarasoueidan.com/blog/css-svg-clipping/#clippathunits" class="ref">Clipping in CSS and SVG: The clipPathUnits attribute</a>
+</section>
+
+<section>
+  <h3>gradient filled text</h3>
+  <style>
+    #gradientText {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  </style>
+  <div id="gradientText"></div>
+  <pre><code class="liveCoding xml" contenteditable data-livecoding-id="gradientText">
+  <svg viewBox="0 0 300 60">
+    &lt;defs&gt;
+      &lt;linearGradient id="fire"&gt;
+        &lt;stop stop-color="hotpink" offset="0%"/&gt;
+        &lt;stop stop-color="goldenrod" offset="100%"/&gt;
+      &lt;/linearGradient&gt;
+    &lt;/defs&gt;
+    <text dy="1em" fill="url(#fire)" font-size="50">Wow!</text>
+  </svg>
+  </code></pre>
+</section>
+
+<section data-background-image="img/text-gradient.png" data-background-size="contain">
+  <a class="ref credit" href="http://codepen.io/brenna/full/mybQVx/" traget="_blank">http://codepen.io/brenna/full/mybQVx/</a>
+  <aside class="notes">
+    <p>only other way i've seen this done with live text is with -webkit-background-clip: text; and that's only webkit!</p>
+  </aside>
+</section>
+
+<!-- ===============================================
+ image filled text
+================================================ -->
+<section data-background="#008B9A">
+  <svg viewBox="0 0 80 100" class="count-watermark">
+    <text font-size="130" y="95">4</text>
+  </svg>
+  <h1>text<br> filled<br>  with images</h1>
+</section>
+
+<section>
+  <h2>Let's talk about...</h2>
+  <br>
+  <ul>
+    <li><h3><code>&lt;image&gt;</code></h3></li>
+    <li><h3><code>&lt;pattern&gt;</code></h3></li>
+    <li><h3><code>&lt;clipPath&gt;</code></h3></li>
+  </ul>
+</section>
+
+<section>
+  <h3><code>&lt;image&gt;</code> vs <code>&lt;img&gt;</code></h3>
+  <div id="preserveAspectRatio" class="svg-example" style="display:inline-block;"></div>
+  &nbsp;&nbsp;<img class="naked" src="img/moon.jpg" alt="" width="300">
+  <pre><code class="liveCoding xml" contenteditable data-livecoding-id="preserveAspectRatio">
+  <svg viewBox="0 0 200 100" width="600px">
+    <!-- default value is 'meet', not 'slice' -->
+    &lt;image preserveAspectRatio="xMidYMid slice"
+      xlink:href="img/moon.jpg" width="200" height="100" /&gt;
+  </svg>
+  </code></pre>
+</section>
+
+<section data-background="img/pattern.png">
+  <h2><code>&lt;pattern&gt;</code></h2>
+  <br>
+  <ul>
+    <li><h4>turns any SVG element into a fill</h4></li>
+    <li><h4>most fun with &lt;image&gt;</h4></li>
+  </ul>
+</section>
+
+<section>
+  <h3>image fills with <code>&lt;pattern&gt;</code></h3>
+  <style>
+    .moon-text svg {
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+  </style>
+  <div id="image-fill" class="moon-text" style="width: 700px"></div>
+  <pre><code class="liveCoding xml" contenteditable data-livecoding-id="image-fill">
+  <svg viewBox="0 0 200 60">
+    <defs>
+      &lt;pattern id="moon" width="200" height="60"
+        patternUnits="userSpaceOnUse"&gt;
+        <image xlink:href="img/moon.jpg" width="200" height="60" preserveAspectRatio="xMidYMid slice"/>
+      &lt;/pattern&gt;
+    </defs>
+    <text fill="url(#moon)" y="1em">moon</text>
+  </svg>
+  </code></pre>
+</section>
+
+<section>
+  <h2>Image fill hot tips</h2>
+  <br>
+  <ul>
+    <li><p>&lt;image&gt; <em>needs</em> a width and height<br></p></li>
+    <li><p><code>preserveAspectRatio</code> to fill <code>viewBox</code></p></li>
+    <li><p><code>patternUnits="userSpaceOnUse"</code> to size image viewBox</p></li>
+  </ul>
+  <br>
+  <br>
+  <a href="http://codepen.io/jonitrythall/blog/preserveaspectratio-in-svg" class="ref" target="_blank">A Look At preserveAspectRatio in SVG</a>
+</section>
+
+<section data-background-image="img/cookie-cutter-heart.jpg" data-state="img-bg" data-background-position="bottom">
+  <h2><code>&lt;clipPath&gt;</code></h2>
+  <br>
+  <h3>restricts the visible area of another SVG element</h3>
+</section>
+
+<section>
+  <h3>image fills with <code>&lt;clipPath&gt;</code></h3>
+  <!-- TODO change to Mars example  -->
+  <div id="image-fill-clip" class="moon-text" style="width: 700px"></div>
+  <pre><code class="liveCoding xml" contenteditable data-livecoding-id="image-fill-clip">
+  <svg viewBox="0 0 200 60">
+    <defs>
+      <clipPath id="mars-text">
+        <text y="1em">mars</text>
+      </clipPath>
+    </defs>
+    &lt;image clip-path="url(#mars-text)" xlink:href="img/mars2.jpeg"
+    width="200" height="60" preserveAspectRatio="xMidYMax slice"/&gt;
+  </svg>
+  </code></pre>
+</section>
+
+<!-- <section>
+  <h3><code>clipPath</code> with CSS</h3>
+  <svg>
+    <defs>
+      <clipPath id="space-text">
+        text y="1em">space</text>
+      </clipPath>
+    </defs>
+  </svg>
+  <style>
+    .space-image {
+      clip-path: url(#space-text);
+    }
+  </style>
+  <div id="cssclip">
+    <img src="img/moon.jpg" alt="" class="space-image naked" width="400">
+    <img src="img/stars.jpg" alt="" class="space-image">
+  </div>
+  </code></pre>
+</section> -->
+
+<section data-background-image="img/zoidberg.png" data-state="img-bg">
+  <h1>Why not text filled with gifs?</h1>
+</section>
+
+<section data-background-image="img/gif-text.gif" data-background-size="contain" data-background-color="#000">
+  <a href="http://codepen.io/brenna/full/vEBQra/" class="ref credit">http://codepen.io/brenna/full/vEBQra/</a>
+</section>
+<!-- </section>
+ <style>
+   .space-text {
+     font-family: "Syncopate";
+     text-transform: uppercase;
+   }
+ </style>
+ <br>
+ <br>
+ <svg viewBox="0 0 200 90" class="space-text">
+   <defs>
+     <pattern id="space" patternUnits="userSpaceOnUse" width="200" height="90">
+       <image xlink:href="img/space.gif" width="200" height="90" preserveAspectRatio="xMidYMid slice"/>
+     </pattern>
+   </defs>
+
+   <text fill="url(#space)" class="line1" x="0" y="33" font-size="46">space</text>
+   <text fill="url(#space)" class="line2" x="0" y="60" font-size="28.5">the final</text>
+   <text fill="url(#space)" class="line3" x="0" y="85" font-size="29.5">frontier</text>
+ </svg>
+ <br>
+ <a href="http://codepen.io/brenna/full/vEBQra/" class="ref">http://codepen.io/brenna/full/vEBQra/</a>
+</section> -->
+
+<!-- TODO: get this working or Cut it -->
+<!-- <section data-background-image="img/zoidberg.png" data-state="img-bg">
+  <h1>Why not text filled with video?</h1>
+  <aside class="notes">
+    works well with iframe embeds, a little finicky with video tag rn
+  </aside>
+</section>
+
+<section>
+  <h3><code>clip-path</code> in CSS</h3>
+  <svg viewBox="0 0 200 60" width="700px">
+    <defs>
+      <clipPath id="`" >
+        <text y="1em">moon</text>
+      </clipPath>
+    </defs>
+  </svg>
+  <div id="video-fill">
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/bDr8RXof8mQ" frameborder="0" allowfullscreen class="moon-video"></iframe>
+    </div>
+  </div>
+  <div class="half">
+    <pre><code class="css liveCoding" data-livecoding-id="video-fill">
+  .moon-video {
+    -webkit-clip-path: url(#moonText);
+    clip-path: url(#moonText);
+  }
+    </code></pre>
+  </div>
+</section> -->
+<!-- <video src="img/apollo11.mov" autoplay controls width="400" class="moon-video"> </video> -->
+
+<!-- ===============================================
+ ::knockout text
+================================================ -->
+<section data-background="#008B9A">
+  <svg viewBox="0 0 80 100" class="count-watermark">
+    <text font-size="130" y="95">5</text>
+  </svg>
+  <h1>knockout text</h1>
+</section>
+
+<section data-background-image="img/ham-text.png" data-background-size="contain">
+  <a href="http://codepen.io/brenna/full/XmeRqb/" class="ref credit">http://codepen.io/brenna/full/XmeRqb/</a>
+</section>
+
+<section>
+  <h2>Let's talk about...</h2>
+  <br>
+  <ul>
+    <li><h3><code>&lt;mask&gt;</code></h3></li>
+    <li><h3><code>&lt;rect&gt;</code></h3></li>
+    <li><h3><code>text-anchor</code></h3></li>
+  </ul>
+</section>
+
+<section data-background="radial-gradient(#fff 10%, #000 70%)" data-state="img-bg">
+  <h2><code>&lt;mask&gt;</code></h2>
+  <br>
+  <ul>
+    <li><h3>like <code>&lt;clipPath&gt;</code> but with more control</h3></li>
+    <li><h3>black fill = opaque mask<br>white fill = transparent mask</h3></li>
+  </ul>
+</section>
+
+
+<section>
+  <h3>knockout text with <code>&lt;mask&gt;</code></h3>
+  <style>
+    #mask,
+    #knockout {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-family: 'Helvetica', 'Arial', sans-serif;
+    }
+  </style>
+  <div id="mask"></div>
+  <pre><code class="liveCoding xml" contenteditable data-livecoding-id="mask">
+    <svg viewBox="0 0 200 25">
+      <rect fill="#fff" x="0" y="0" width="200" height="50"/>
+      <text y="20" fill="#000" text-anchor="middle" x="50%" font-size="20">
+         Buy 2 hams $20
+      </text>
+    </svg>
+  </code></pre>
+</section>
+
+<section>
+  <h3>knockout text with <code>&lt;mask&gt;</code></h3>
+  <style>
+  #knockout {
+    background: url(img/ham.jpg) bottom;
+    padding: 20px 0;
+  }
+  </style>
+  <div id="knockout"></div>
+  <pre><code class="liveCoding xml" contenteditable data-livecoding-id="knockout">
+  <svg viewBox="0 0 200 25">
+    &lt;rect fill="#000" fill-opacity=".75" mask="url(#ham-text)"
+    x="0" y="0" width="200" height="50" /&gt;
+    <mask id="ham-text">
+      <rect fill="#fff" x="0" y="0" width="200" height="50"/>
+      <text y="20" fill="#000" text-anchor="middle" x="50%" font-size="20">
+         Buy 2 hams $20
+      </text>
+    </mask>
+  </svg>
+  </code></pre>
+  <aside class="notes">
+    * go over TEXT-ANCHOR HERE~~~
+    * mask should be in a defs but saving space
+  </aside>
+</section>
+
+
+<!-- ===============================================
+:: text that types itself
+================================================ -->
+<section data-background="#008B9A">
+  <svg viewBox="0 0 80 100" class="count-watermark">
+    <text font-size="130" y="95">6</text>
+  </svg>
+  <h1>self typing<br> text</h1>
+</section>
+
+<section>
+  <h2>Let's talk about...</h2>
+  <br>
+  <h3><code>&lt;animate&gt;</code></h3>
+</section>
+
+<section data-background-image="img/inside-the-house.png" data-state="img-bg">
+  <h2><code>&lt;animate&gt;</code></h2>
+  <br>
+  <h3>animate (almost) any attribute, <span>from within the SVG</span></h3>
+  <br>
+  <br>
+  <a href="http://www.xanthir.com/etc/animatable-svg-attributes.html" class="ref">Animatable SVG Attributes</a>
+</section>
+
+<section>
+  <h3><code>&lt;animate&gt;</code></h3>
+  <br>
+  <img src="img/line-animation.gif" alt="" width="500px" class="naked">
+  <!-- <div id="lineAnimation" style="width: 500px"></div> -->
+  <!-- <pre><code class="liveCoding xml" data-livecoding-id="lineAnimation"> -->
+  <pre><code>
+  <svg viewBox="0 0 800 100">
+    &lt;line stroke="goldenrod" stroke-width="10"
+      x1="0" y1="50" x2="0" y2="50"&gt;
+      &lt;animate attributeName="x2"
+      from="0" to="800"
+      dur="2s" repeatCount="indefinite"/&gt;
+    &lt;/line&gt;
+  </svg>
+  </code></pre>
+</section>
+
+<section>
+  <h3>self-typing text with <code>&lt;textPath&gt;</code> and <code>&lt;animate&gt;</code></h3>
+  <style>
+    #selfTyping svg{
+      font-family: 'courier';
+      fill: #00ff00;
+    }
+  </style>
+  <img src="img/self-typing.gif" alt="" width="500px" class="naked">
+  <!-- <div id="selfTyping" style="width: 500px"></div> -->
+  <!-- <pre><code class="liveCoding xml" data-livecoding-id="selfTyping" contenteditable style="max-height: 435px;"> -->
+  <pre><code>
+  <svg viewBox="0 0 800 100">
+    <defs>
+      <path id="animatedLine">
+        &lt;animate attributeName="d" from="m0,50 h0" to="m0,50 h800" dur="2s" repeatCount="indefinite"/&gt;
+      </path>
+    </defs>
+    <text dy="25" font-size="80">
+      &lt;textPath xlink:href="#animatedLine"&gt;
+        hack the planet&lt;/textPath&gt;
+    </text>
+  </svg>
+  </code></pre>
+</section>
+
+<section>
+  <h3>self-typing text with <code>&lt;textPath&gt;</code> and <code>&lt;animate&gt;</code></h3>
+  <img src="img/loading-text.gif" alt="" width="200px" class="naked" style="margin: 0 auto 26px; display: block;">
+  <!-- <div id="svgLoading" style="width: 200px; margin:0 auto 32px;"></div> -->
+  <!-- <pre><code class="liveCoding xml" data-livecoding-id="svgLoading" contenteditable style="max-height: 435px;"> -->
+  <pre><code>
+  <svg viewBox="0 0 400 100">
+    <defs>
+      <path id="animatedLine">
+        &lt;animate attributeName="d" from="m0,50 h0" to="m0,50 h400" dur="1s" repeatCount="indefinite"/&gt;
+      </path>
+    </defs>
+    <text dy="25" font-size="80" fill="#fff" x="50%" text-anchor="middle">
+      &lt;textPath xlink:href="#animatedLine"&gt;
+        loading...&lt;/textPath&gt;
+    </text>
+  </svg>
+  </code></pre>
+</section>
+
+<section>
+  <h2 class="has-bullet has-bullet--large"><span class="bullet">Q:</span> Why not just <code>&lt;animate&gt;</code><br> with CSS & JS?</h2>
+  <br>
+  <h3 class="fragment tweens has-bullet has-bullet--large"><span class="bullet">A:</span> <img  src="img/cool-tweens.png" width="500px"></h3>
+</section>
+
+
+<!-- ===============================================
+:: morphing text
+================================================ -->
+<section data-background="#008B9A">
+  <svg viewBox="0 0 80 100" class="count-watermark">
+    <text font-size="130" y="95">7</text>
+  </svg>
+  <h1>ani-<br> morphing<br> text</h1>
+</section>
+
+<section data-background="img/animorphs.jpg" data-state="img-bg">
+  <h1><code>&lt;animate&gt;</code> can morph glyphs!</code></h1>
+</section>
+
+<section data-background-image="img/number-morph.gif" data-background-size="contain" data-background-color="#000">
+  <a href="http://codepen.io/NinjaCoffee/full/JoJZrB/" class="ref credit">http://codepen.io/NinjaCoffee/full/JoJZrB/</a>
+</section>
+
+<section>
+  <h3>converting text to paths</h3>
+  <img src="img/create-outline.png" alt="" width="700px">
+</section>
+
+<!-- <section>
+  <h3>morphing text paths</h3>
+  <div id="morph" style="width: 300px;"></div> -->
+<!--   N path
+  M36.601,36.093l63.064,0l62.49,109.767l51.79,90.972l0,-201l56.054,0l0,287.891l-60.144,0l-56.556-98.571l-60,-105l0,204.27l-57.3,0z
+
+  M36.601,36.093  l60.7,0     l0,109.8
+  l112.5,0        l0,-109.8   l60.7,0
+  l0,287.9        l-60.7,0    l0,-129
+  l-112.5,0       l0,129      l-60.7,0z;
+
+  H path
+  M36.601,36.093l60.7,0l0,109.8l112.5,0l0,-109.8l60.7,0l0,287.9l-60.7,0l0,-129l-112.5,0l0,129l-60.7,0z
+
+  M36.601,36.093  l63.064,0   l62.49,109.767
+  l51.79,90.972   l0,-201     l56.054,0
+  l0,287.891      l-60.144,0  l-56.556-98.571
+  l-60,-105       l0,204.27     l-57.3,0z;
+  -->
+<!--   <pre><code class="xml liveCoding" data-livecoding-id="morph">
+  <svg viewBox="0 0 880.456 356.982" fill="hotpink">
+    &lt;animate attributeName="fill" begin="1s" dur="2s"
+      to="#008B9A" fill="freeze"/&gt;
+    <path d="M36.601,36.093l60.7,0l0,109.8l112.5,0l0,-109.8l60.7,0l0,287.9l-60.7,0l0,-129l-112.5,0l0,129l-60.7,0z">
+      <animate attributeName="d" begin="1s" dur="2s" fill="freeze" repeatCount="1"
+        to="M36.601,36.093l63.064,0l62.49,109.767l51.79,90.972l0,-201l56.054,0l0,287.891l-60.144,0l-56.556-98.571l-60,-105l0,204.27l-57.3,0z">
+    </path>
+
+    <path d="M548.514,298.397c-21.747,22.397-53.192,33.594-94.336,33.594c-41.146,0-72.592-11.196-94.336-33.594c-29.169-27.472-43.75-67.056-43.75-118.75c0-52.734,14.581-92.315,43.75-118.75c21.744-22.394,53.189-33.594,94.336-33.594c41.144,0,72.589,11.2,94.336,33.594c29.034,26.435,43.555,66.016,43.555,118.75C592.069,231.342,577.548,270.926,548.514,298.397zM510.917,254.647c13.995-17.578,20.996-42.578,20.996-75c0-32.291-7.001-57.257-20.996-74.902c-13.998-17.642-32.91-26.465-56.738-26.465s-42.841,8.789-57.031,26.367c-14.193,17.578-21.289,42.578-21.289,75s7.096,57.422,21.289,75c14.19,17.578,33.203,26.367,57.031,26.367S496.918,272.226,510.917,254.647z"/>
+    <path d="M847.147,36.093v50.977h-86.133v236.914h-60.547V87.069h-86.523V36.093H847.147z"/>
+  </svg>
+  </code></pre>
+</section> -->
+
+<!-- <section>
+   <h3>morphing text paths</h3>
+update this to run on command, see codepen link  -->
+  <!-- <div id="y-n" style="width: 200px"></div> -->
+  <!-- <button id="makeItGo">Make it go</button>  -->
+<!--   <pre><code class="xml liveCoding" data-livecoding-id="y-n" contenteditable>
+  <svg viewBox="0 0 100 100">
+    <path fill="goldenrod" d="M7.27,5.416    h26.127  l16.5,34.2      l16.5-34.2  h26.1    l-31.1,53.1  l0,32.107   l-11.35,0       l-11.35,0      l0-31.9z">
+      <animate attributeName="d" dur="3s" repeatCount="indefinite"
+      values="
+        M7.27,5.416    h26.127  l16.5,34.2      l16.5-34.2  h26.1    l-31.1,53.1  l0,32.107   l-11.35,0       l-11.35,0      l0-31.9z;
+        M10.822,5.429  h28.927  l28.802,57.851  l0-57.45    h20.748  l0,85.189    l-28.927,0  l-29.78-58.217  l0.489,58.217  l-20.86,0z;
+        M10.822,5.429  h28.927  l28.802,57.851  l0-57.45    h20.748  l0,85.189    l-28.927,0  l-29.78-58.217  l0.489,58.217  l-20.86,0z;
+        M7.27,5.416    h26.127  l16.5,34.2      l16.5-34.2  h26.1    l-31.1,53.1  l0,32.107   l-11.35,0       l-11.35,0      l0-31.9z;
+        M7.27,5.416    h26.127  l16.5,34.2      l16.5-34.2  h26.1    l-31.1,53.1  l0,32.107   l-11.35,0       l-11.35,0      l0-31.9z"/>
+      &lt;animate attributeName="fill" dur="3s" repeatCount="indefinite"
+        values="goldenrod; #BE1637; #BE1637; goldenrod; goldenrod;"/&gt;
+    </path>
+  </svg>
+  </code></pre>
+</section> -->
+
+<section>
+   <h3>morphing text paths</h3>
+<!-- update this to run on command, see codepen link  -->
+  <div id="yes-no" style="width: 200px; display: inline-block;"></div>
+  <button id="makeItGo" class="agree-button">say yes</button>
+  <pre><code class="xml liveCoding" data-livecoding-id="yes-no" contenteditable>
+  <svg viewBox="0 0 100 100">
+    <path fill="#BE1637" d="M10.822,5.429  h28.927  l28.802,57.851  l0-57.45    h20.748  l0,85.189    l-28.927,0  l-29.78-58.217  l0.489,58.217  l-20.86,0z">
+      &lt;animate class="yes" attributeName="d" dur="1s"
+        begin="indefinite" fill="freeze"
+        to="M7.27,5.416 h26.127  l16.5,34.2 l16.5-34.2  h26.1 l-31.1,53.1  l0,32.107 l-11.35,0 l-11.35,0 l0-31.9z"/&gt;
+      &lt;animate attributeName="fill" dur="1s"
+        begin="indefinite" fill="freeze"
+        to="goldenrod"/&gt;
+    </path>
+  </svg>
+  </code></pre>
+</section>
+
+<section>
+  <h2>morphin' hot tips</h2>
+  <br>
+  <ul>
+    <li>
+      <p>paths must have the <i>exact</i> same number <br>and typeof anchor points <sup>*</sup></p>
+      <p class="small">* or use <a href="http://greensock.com/morphSVG">GreenSock MorphSVG Plugin</a></p>
+    </li>
+    <li><p><code>fill="freeze"</code> to hold end state</p></li>
+    <li><p><code>duration="indefinite"</code> and <code>.beginElement()</code>to trigger with JS</p></li>
+  </ul>
+  <br>
+  <br>
+  <p><a href="https://css-tricks.com/svg-shape-morphing-works/" class="ref" target="_blank">How SVG Shape Morphing Works</a></p>
+</section>
+
+<section>
+  <h2>paths can be made accessible</h2>
+  <br>
+  <div>
+    <h3><code>&lt;title&gt;</code>, <code>&lt;desc&gt;</code> and ARIA</h3>
+    <br>
+    <br>
+    <p><small><a href="http://www.sitepoint.com/tips-accessible-svg/">Tips for Creating Accessible SVG</a></small></p>
+  </div>
+</section>
+
+
+<!-- ===============================================
+:: text that draws itself
+================================================ -->
+<section data-background="#008B9A">
+  <svg viewBox="0 0 80 100" class="count-watermark">
+    <text font-size="130" y="95">8</text>
+  </svg>
+  <h1>self drawing<br> text</h1>
+</section>
+
+<section>
+  <h2>Let's talk about...</h2>
+  <br>
+  <ul>
+    <li><h3><code>stroke-dasharray</code></h3></li>
+    <li><h3><code>stroke-dashoffset</code></h3></li>
+  </ul>
+</section>
+
+<section>
+  <h3>self-drawing <code>&lt;text&gt;</code></h3>
+<!--   <div id="textStrokeAnimate" style="width: 400px;"></div>
+  <pre><code class="xml liveCoding" data-livecoding-id="textStrokeAnimate" contenteditable> -->
+  <img src="img/self-drawing-text.gif" width="200px" alt="" class="naked">
+  <pre><code>
+  <svg viewBox="0 0 200 80" stroke-width="1">
+    &lt;text stroke-dasharray="700 700" stroke-dashoffset="700"
+      fill="none" stroke="#fff" dy="1em" font-size="70"&gt;
+      cool
+      &lt;animate dur="2s" repeatCount="indefinite"
+        attributeName="stroke-dashoffset"
+        values="700;0" /&gt;
+    &lt;text&gt;
+    </svg>
+  </code> </pre>
+</section>
+
+<section>
+  <h2 style="font-size: 1.7em">self-drawing <code>&lt;path&gt;</code></h2>
+  <br>
+  <h3>long<br> <code>stroke-dasharray</code></h3>
+  <p>+</p>
+  <h3>animated<br> <code>stroke-dashoffset</code></h3>
+  <p><a href="http://css-tricks.com/svg-line-animation-works/" class="ref">How SVG Line Animation Works</a></p>
+</section>
+
+
+<section>
+  <h3>self-drawing <code>&lt;path&gt;</code></h3>
+<!--   <div id="strokeAnimate" style="width: 200px;"></div>
+  <pre><code class="xml liveCoding" data-livecoding-id="strokeAnimate" contenteditable> -->
+  <img src="img/self-drawing-cat.gif" width="200px" alt="" class="naked">
+  <pre><code>
+  <svg viewBox="0 0 100 80" stroke-width="1">
+    &lt;path stroke-dasharray="200 200" stroke-dashoffset="200" fill="none" stroke="#fff"
+      d="M26.325,31.255c0.623-2.608-1.089-8.703-1.089-11.383c0-2.863-0.255-5.876,0.028-8.725c1.533,3.676,4.99,6.807,7.303,9.998c1.781,2.457,3.374,4.643,4.075,7.623c2.356-0.13,4.568-1.057,7.044-0.652c1.929,0.315,4.543,1.057,6.155,2.174c0.737-1.115,1.155-2.605,1.626-3.831c1.263-3.285,2.666-6.38,4.499-9.385c0.839-1.375,1.635-2.99,2.583-4.26c0.104,5.004,1.526,9.846,1.548,14.827c0.004,0.896-0.126,1.903,0,2.79c0.134,0.947,0.079,0.708,0.49,1.458c0.772,1.411,2.459,2.691,3.478,3.954c1.379,1.711,2.333,3.192,2.921,5.313c0.97,3.497,1.53,8.9,0.375,12.37c-1.624,4.879-4.688,7.727-8.488,10.109C51.7,68.133,47.63,68.824,39.28,65.737c-6.503-2.404-12.196-6.026-15.273-12.438c-1.965-4.096-2.422-9.251-2.118-13.737C22.035,37.402,23.517,31.44,26.325,31.255"&gt;
+      &lt;animate dur="2s" repeatCount="indefinite"
+        attributeName="stroke-dashoffset"
+        values="200;0" /&gt;
+    &lt;/path&gt;
+    </svg>
+  </code> </pre>
+</section>
+
+<section>
+  <h3>self-drawing text <code>&lt;path&gt;</code></h3>
+  <!-- <div id="selfDrawing" style="width: 550px"></div> -->
+  <img src="img/self-drawing.gif" alt="" width="550px" class="naked">
+  <!-- <pre><code class="xml liveCoding" data-livecoding-id="selfDrawing"> -->
+  <pre><code>
+  <svg viewBox="0 0 514 154" fill="none" stroke="#fff" stroke-width="3" >
+    &lt;path stroke-dashoffset="170" stroke-dasharray="170 170" d="M85.829,53.281C79.831,43.719,68.859,28.49,55,31.392c-14.211,2.976-24.931,16.44-22.009,31.469C36.657,81.72,51.87,88.245,65.286,98.974c9.447,7.554,20.266,14.968,16.728,27.692"&gt;
+      &lt;animate dur="2.5s" repeatCount="indefinite"
+        attributeName="stroke-dashoffset"
+        values="170;0;0;0;0;0"/&gt;
+    &lt;/path&gt;
+    <path stroke-dashoffset="170" stroke-dasharray="170 170" d="M86.29,51.759C85.829,40,101.451,31.417,108.667,31.392c18.838-0.064,25.381,14.722,25.721,26.399c0.577,19.855-26.349,34.853-39.721,45.542c-8.141,6.507-11.573,10.448-16.509,19.325">
+      &lt;animate dur="2.5s" repeatCount="indefinite"
+        attributeName="stroke-dashoffset"
+        values="170;170;0;0;0;0" /&gt;
+    </path>
+    <path stroke-dashoffset="720" stroke-dasharray="720 720" d="M134.822,121c13.331-22.482,78.647-107.117,110.639-96.537c26.659,9.257-54.654,55.542-65.318,60.832c78.647-30.417,29.326,59.507-9.331,42.316c-15.995-6.61,17.329-9.255,22.662-9.255c31.993,3.965,35.99,6.609,66.65-7.937c22.661-10.577,11.997-2.645,30.659,5.291c22.66,7.935,41.322-6.61,62.65-3.965c11.996,1.32,18.662,9.255,33.326,10.575c14.663,1.324,27.991-6.61,42.653-10.575c0,1.32,0,3.965,0,5.288c9.334-2.646,18.663-5.288,27.992-10.58c2.667,7.934,6.668,3.965,14.665,3.965">
+      &lt;animate dur="2.5s"repeatCount="indefinite"
+      attributeName="stroke-dashoffset"
+      values="720;720;720;360;0;0" /&gt;
+    </path>
+  </svg>
+  </code></pre>
+</section>
+
+ <!-- ===============================================
+  conclusion
+================================================ -->
+
+
+<section>
+  <div class="summary-list">
+    <p><code>&lt;text&gt;</code></p>
+    <p><code>&lt;tspan&gt;</code></p>
+    <p><code>&lt;textPath&gt;</code></p>
+    <p><code>&lt;defs&gt;</code></p>
+    <p><code>&lt;linearGradient&gt;</code></p>
+    <p><code>&lt;radialGradient&gt;</code></p>
+    <p><code>&lt;stop&gt;</code></p>
+    <p><code>&lt;image&gt;</code></p>
+    <p><code>&lt;pattern&gt;</code></p>
+    <p><code>&lt;clipPath&gt;</code></p>
+    <p><code>&lt;mask&gt;</code></p>
+    <p><code>&lt;rect&gt;</code></p>
+    <p><code>&lt;animate&gt;</code></p>
+    <p><code>&lt;line&gt;</code></p>
+    <p><code>&lt;path&gt;</code></p>
+  </div>
+  <div class="summary-list summary-list--long">
+    <p><code>d</code></p>
+    <p><code>fill</code></p>
+    <p><code>stroke</code></p>
+    <p><code>x, y</code></p>
+    <p><code>dx, dy</code></p>
+    <p><code>textLength</code></p>
+    <p><code>lengthAdjust</code></p>
+    <p><code>font-size</code></p>
+    <p><code>font-weight</code></p>
+    <p><code>xlink:href</code></p>
+    <p><code>alignment-baseline</code></p>
+    <p><code>x1, x2</code></p>
+    <p><code>y1, y2</code></p>
+    <p><code>cx, cy, r</code></p>
+    <p><code>stop-color</code></p>
+    <p><code>offset</code></p>
+    <p><code>gradientUnits</code></p>
+    <p><code>clipPathUnits</code></p>
+    <p><code>maskUnits</code></p>
+    <p><code>patternUnits</code></p>
+    <p><code>preserveAspectRatio</code></p>
+    <p><code>text-anchor</code></p>
+    <p><code>fill-opacity</code></p>
+    <p><code>attributeName</code></p>
+    <p><code>to, from</code></p>
+    <p><code>values</code></p>
+    <p><code>begin, dur</code></p>
+    <p><code>repeatCount</code></p>
+    <p><code>stroke-dasharray</code></p>
+    <p><code>stroke-dashoffset</code></p>
+  </div>
+</section>
+
+
+<section>
+  <div class="summary-list summary-list--all">
+    <p><code>&lt;a&gt;</code></p>
+    <p><code>&lt;altGlyph&gt;</code></p>
+    <p><code>&lt;altGlyphDef&gt;</code></p>
+    <p><code>&lt;altGlyphItem&gt;</code></p>
+    <p class="highlight"><code>&lt;animate&gt;</code></p>
+    <p><code>&lt;animateColor&gt;</code></p>
+    <p><code>&lt;animateMotion&gt;</code></p>
+    <p><code>&lt;animateTransform&gt;</code></p>
+    <p><code>&lt;circle&gt;</code></p>
+    <p class="highlight"><code>&lt;clipPath&gt;</code></p>
+    <p><code>&lt;color-profile&gt;</code></p>
+    <p><code>&lt;cursor&gt;</code></p>
+    <p class="highlight"><code>&lt;defs&gt;</code></p>
+    <p><code>&lt;desc&gt;</code></p>
+    <p><code>&lt;ellipse&gt;</code></p>
+    <p><code>&lt;feBlend&gt;</code></p>
+    <p><code>&lt;feColorMatrix&gt;</code></p>
+    <p><code>&lt;feComponentTransfer&gt;</code></p>
+    <p><code>&lt;feComposite&gt;</code></p>
+    <p><code>&lt;feConvolveMatrix&gt;</code></p>
+    <p><code>&lt;feDiffuseLighting&gt;</code></p>
+    <p><code>&lt;feDisplacementMap&gt;</code></p>
+    <p><code>&lt;feDistantLight&gt;</code></p>
+    <p><code>&lt;feFlood&gt;</code></p>
+    <p><code>&lt;feFuncA&gt;</code></p>
+    <p><code>&lt;feFuncB&gt;</code></p>
+    <p><code>&lt;feFuncG&gt;</code></p>
+    <p><code>&lt;feFuncR&gt;</code></p>
+    <p><code>&lt;feGaussianBlur&gt;</code></p>
+    <p><code>&lt;feImage&gt;</code></p>
+    <p><code>&lt;feMerge&gt;</code></p>
+    <p><code>&lt;feMergeNode&gt;</code></p>
+    <p><code>&lt;feMorphology&gt;</code></p>
+    <p><code>&lt;feOffset&gt;</code></p>
+    <p><code>&lt;fePointLight&gt;</code></p>
+    <p><code>&lt;feSpecularLighting&gt;</code></p>
+    <p><code>&lt;feSpotLight&gt;</code></p>
+    <p><code>&lt;feTile&gt;</code></p>
+    <p><code>&lt;feTurbulence&gt;</code></p>
+    <p><code>&lt;filter&gt;</code></p>
+    <p><code>&lt;font&gt;</code></p>
+    <p><code>&lt;font-face&gt;</code></p>
+    <p><code>&lt;font-face-format&gt;</code></p>
+    <p><code>&lt;font-face-name&gt;</code></p>
+    <p><code>&lt;font-face-src&gt;</code></p>
+    <p><code>&lt;font-face-uri&gt;</code></p>
+    <p><code>&lt;foreignObject&gt;</code></p>
+    <p><code>&lt;g&gt;</code></p>
+    <p><code>&lt;glyph&gt;</code></p>
+    <p><code>&lt;glyphRef&gt;</code></p>
+    <p><code>&lt;hkern&gt;</code></p>
+    <p class="highlight"><code>&lt;image&gt;</code></p>
+    <p class="highlight"><code>&lt;line&gt;</code></p>
+    <p class="highlight"><code>&lt;linearGradient&gt;</code></p>
+    <p><code>&lt;marker&gt;</code></p>
+    <p class="highlight"><code>&lt;mask&gt;</code></p>
+    <p><code>&lt;metadata&gt;</code></p>
+    <p><code>&lt;missing-glyph&gt;</code></p>
+    <p><code>&lt;mpath&gt;</code></p>
+    <p class="highlight"><code>&lt;path&gt;</code></p>
+    <p class="highlight"><code>&lt;pattern&gt;</code></p>
+    <p><code>&lt;polygon&gt;</code></p>
+    <p><code>&lt;polyline&gt;</code></p>
+    <p class="highlight"><code>&lt;radialGradient&gt;</code></p>
+    <p class="highlight"><code>&lt;rect&gt;</code></p>
+    <p><code>&lt;script&gt;</code></p>
+    <p><code>&lt;set&gt;</code></p>
+    <p class="highlight"><code>&lt;stop&gt;</code></p>
+    <p><code>&lt;style&gt;</code></p>
+    <p><code>&lt;svg&gt;</code></p>
+    <p><code>&lt;switch&gt;</code></p>
+    <p><code>&lt;symbol&gt;</code></p>
+    <p class="highlight"><code>&lt;text&gt;</code></p>
+    <p class="highlight"><code>&lt;textPath&gt;</code></p>
+    <p><code>&lt;title&gt;</code></p>
+    <p><code>&lt;tref&gt;</code></p>
+    <p class="highlight"><code>&lt;tspan&gt;</code></p>
+    <p><code>&lt;use&gt;</code></p>
+    <p><code>&lt;view&gt;</code></p>
+    <p><code>&lt;vkern&gt;</code></p>
+  </div>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element" class="ref" target="_blank">MDN: SVG element reference</a>
+</section>
+
+<section>
+  <div class="summary-list summary-list--all summary-list--all-attrs">
+    <p><code>accent-height</code></p>
+    <p><code>accumulate</code></p>
+    <p><code>additive</code></p>
+    <p class="highlight"><code>alignment-baseline</code></p>
+    <p><code>allowReorder</code></p>
+    <p><code>alphabetic</code></p>
+    <p><code>amplitude</code></p>
+    <p><code>arabic-form</code></p>
+    <p><code>ascent</code></p>
+    <p class="highlight"><code>attributeName</code></p>
+    <p><code>attributeType</code></p>
+    <p><code>autoReverse</code></p>
+    <p><code>azimuth</code></p>
+    <p><code>baseFrequency</code></p>
+    <p><code>baseline-shift</code></p>
+    <p><code>baseProfile</code></p>
+    <p><code>bbox</code></p>
+    <p class="highlight"><code>begin</code></p>
+    <p><code>bias</code></p>
+    <p><code>by</code></p>
+    <p><code>calcMode</code></p>
+    <p><code>cap-height</code></p>
+    <p class="highlight"><code>class</code></p>
+    <p><code>clip</code></p>
+    <p class="highlight"><code>clipPathUnits</code></p>
+    <p class="highlight"><code>clip-path</code></p>
+    <p><code>clip-rule</code></p>
+    <p><code>color</code></p>
+    <p><code>color-interpolation</code></p>
+    <p><code>color-interpolation-filters</code></p>
+    <p><code>color-profile</code></p>
+    <p><code>color-rendering</code></p>
+    <p><code>contentScriptType</code></p>
+    <p><code>contentStyleType</code></p>
+    <p><code>cursor</code></p>
+    <p class="highlight"><code>cx</code></p>
+    <p class="highlight"><code>cy</code></p>
+    <p class="highlight"><code>d</code></p>
+    <p><code>decelerate</code></p>
+    <p><code>descent</code></p>
+    <p><code>diffuseConstant</code></p>
+    <p><code>direction</code></p>
+    <p><code>display</code></p>
+    <p><code>divisor</code></p>
+    <p><code>dominant-baseline</code></p>
+    <p class="highlight"><code>dur</code></p>
+    <p class="highlight"><code>dx</code></p>
+    <p class="highlight"><code>dy</code></p>
+    <p><code>edgeMode</code></p>
+    <p><code>elevation</code></p>
+    <p><code>enable-background</code></p>
+    <p><code>end</code></p>
+    <p><code>exponent</code></p>
+    <p><code>externalResourcesRequired</code></p>
+    <p class="highlight"><code>fill</code></p>
+    <p class="highlight"><code>fill-opacity</code></p>
+    <p><code>fill-rule</code></p>
+    <p><code>filter</code></p>
+    <p><code>filterRes</code></p>
+    <p><code>filterUnits</code></p>
+    <p><code>flood-color</code></p>
+    <p><code>flood-opacity</code></p>
+    <p><code>font-family</code></p>
+    <p class="highlight"><code>font-size</code></p>
+    <p><code>font-size-adjust</code></p>
+    <p><code>font-stretch</code></p>
+    <p><code>font-style</code></p>
+    <p><code>font-variant</code></p>
+    <p class="highlight"><code>font-weight</code></p>
+    <p><code>format</code></p>
+    <p class="highlight"><code>from</code></p>
+    <p><code>fx</code></p>
+    <p><code>fy</code></p>
+    <p><code>g1</code></p>
+    <p><code>g2</code></p>
+    <p><code>glyph-name</code></p>
+    <p><code>glyph-orientation-horizontal</code></p>
+    <p><code>glyph-orientation-vertical</code></p>
+    <p><code>glyphRef</code></p>
+    <p><code>gradientTransform</code></p>
+    <p class="highlight"><code>gradientUnits</code></p>
+    <p><code>hanging</code></p>
+    <p><code>height</code></p>
+    <p><code>horiz-adv-x</code></p>
+    <p><code>horiz-origin-x</code></p>
+    <p class="highlight"><code>id</code></p>
+    <p><code>ideographic</code></p>
+    <p><code>image-rendering</code></p>
+    <p><code>in</code></p>
+    <p><code>in2</code></p>
+    <p><code>intercept</code></p>
+    <p><code>k</code></p>
+    <p><code>k1</code></p>
+    <p><code>k2</code></p>
+    <p><code>k3</code></p>
+    <p><code>k4</code></p>
+    <p><code>kernelMatrix</code></p>
+    <p><code>kernelUnitLength</code></p>
+    <p><code>kerning</code></p>
+    <p><code>keyPoints</code></p>
+    <p><code>keySplines</code></p>
+    <p><code>keyTimes</code></p>
+    <p><code>lang</code></p>
+    <p class="highlight"><code>lengthAdjust</code></p>
+    <p><code>letter-spacing</code></p>
+    <p><code>lighting-color</code></p>
+    <p><code>limitingConeAngle</code></p>
+    <p><code>local</code></p>
+    <p><code>marker-end</code></p>
+    <p><code>marker-mid</code></p>
+    <p><code>marker-start</code></p>
+    <p><code>markerHeight</code></p>
+    <p><code>markerUnits</code></p>
+    <p><code>markerWidth</code></p>
+    <p class="highlight"><code>mask</code></p>
+    <p><code>maskContentUnits</code></p>
+    <p class="highlight"><code>maskUnits</code></p>
+    <p><code>mathematical</code></p>
+    <p><code>max</code></p>
+    <p><code>media</code></p>
+    <p><code>method</code></p>
+    <p><code>min</code></p>
+    <p><code>mode</code></p>
+    <p><code>name</code></p>
+    <p><code>numOctaves</code></p>
+    <p class="highlight"><code>offset</code></p>
+    <p><code>onabort</code></p>
+    <p><code>onactivate</code></p>
+    <p><code>onbegin</code></p>
+    <p><code>onclick</code></p>
+    <p><code>onend</code></p>
+    <p><code>onerror</code></p>
+    <p><code>onfocusin</code></p>
+    <p><code>onfocusout</code></p>
+    <p><code>onload</code></p>
+    <p><code>onmousedown</code></p>
+    <p><code>onmousemove</code></p>
+    <p><code>onmouseout</code></p>
+    <p><code>onmouseover</code></p>
+    <p><code>onmouseup</code></p>
+    <p><code>onrepeat</code></p>
+    <p><code>onresize</code></p>
+    <p><code>onscroll</code></p>
+    <p><code>onunload</code></p>
+    <p><code>onzoom</code></p>
+    <p><code>opacity</code></p>
+    <p><code>operator</code></p>
+    <p><code>order</code></p>
+    <p><code>orient</code></p>
+    <p><code>orientation</code></p>
+    <p><code>origin</code></p>
+    <p><code>overflow</code></p>
+    <p><code>overline-position</code></p>
+    <p><code>overline-thickness</code></p>
+    <p><code>panose-1</code></p>
+    <p><code>paint-order</code></p>
+    <p><code>path</code></p>
+    <p><code>pathLength</code></p>
+    <p><code>patternContentUnits</code></p>
+    <p><code>patternTransform</code></p>
+    <p class="highlight"><code>patternUnits</code></p>
+    <p><code>pointer-events</code></p>
+    <p><code>points</code></p>
+    <p><code>pointsAtX</code></p>
+    <p><code>pointsAtY</code></p>
+    <p><code>pointsAtZ</code></p>
+    <p><code>preserveAlpha</code></p>
+    <p class="highlight"><code>preserveAspectRatio</code></p>
+    <p><code>primitiveUnits</code></p>
+    <p class="highlight"><code>r</code></p>
+    <p><code>radius</code></p>
+    <p><code>refX</code></p>
+    <p><code>refY</code></p>
+    <p><code>rendering-intent</code></p>
+    <p class="highlight"><code>repeatCount</code></p>
+    <p><code>repeatDur</code></p>
+    <p><code>requiredExtensions</code></p>
+    <p><code>requiredFeatures</code></p>
+    <p><code>restart</code></p>
+    <p><code>result</code></p>
+    <p><code>rotate</code></p>
+    <p><code>rx</code></p>
+    <p><code>ry</code></p>
+    <p><code>scale</code></p>
+    <p><code>seed</code></p>
+    <p><code>shape-rendering</code></p>
+    <p><code>slope</code></p>
+    <p><code>spacing</code></p>
+    <p><code>specularConstant</code></p>
+    <p><code>specularExponent</code></p>
+    <p><code>speed</code></p>
+    <p><code>spreadMethod</code></p>
+    <p><code>startOffset</code></p>
+    <p><code>stdDeviation</code></p>
+    <p><code>stemh</code></p>
+    <p><code>stemv</code></p>
+    <p><code>stitchTiles</code></p>
+    <p class="highlight"><code>stop-color</code></p>
+    <p><code>stop-opacity</code></p>
+    <p><code>strikethrough-position</code></p>
+    <p><code>strikethrough-thickness</code></p>
+    <p><code>string</code></p>
+    <p class="highlight"><code>stroke</code></p>
+    <p class="highlight"><code>stroke-dasharray</code></p>
+    <p class="highlight"><code>stroke-dashoffset</code></p>
+    <p><code>stroke-linecap</code></p>
+    <p><code>stroke-linejoin</code></p>
+    <p><code>stroke-miterlimit</code></p>
+    <p><code>stroke-opacity</code></p>
+    <p class="highlight"><code>stroke-width</code></p>
+    <p><code>style</code></p>
+    <p><code>surfaceScale</code></p>
+    <p><code>systemLanguage</code></p>
+    <p><code>tableValues</code></p>
+    <p><code>target</code></p>
+    <p><code>targetX</code></p>
+    <p><code>targetY</code></p>
+    <p class="highlight"><code>text-anchor</code></p>
+    <p><code>text-decoration</code></p>
+    <p><code>text-rendering</code></p>
+    <p class="highlight"><code>textLength</code></p>
+    <p class="highlight"><code>to</code></p>
+    <p><code>transform</code></p>
+    <p><code>type</code></p>
+    <p><code>u1</code></p>
+    <p><code>u2</code></p>
+    <p><code>underline-position</code></p>
+    <p><code>underline-thickness</code></p>
+    <p><code>unicode</code></p>
+    <p><code>unicode-bidi</code></p>
+    <p><code>unicode-range</code></p>
+    <p><code>units-per-em</code></p>
+    <p><code>v-alphabetic</code></p>
+    <p><code>v-hanging</code></p>
+    <p><code>v-ideographic</code></p>
+    <p><code>v-mathematical</code></p>
+    <p class="highlight"><code>values</code></p>
+    <p><code>version</code></p>
+    <p><code>vert-adv-y</code></p>
+    <p><code>vert-origin-x</code></p>
+    <p><code>vert-origin-y</code></p>
+    <p><code>viewBox</code></p>
+    <p><code>viewTarget</code></p>
+    <p><code>visibility</code></p>
+    <p><code>width</code></p>
+    <p><code>widths</code></p>
+    <p><code>word-spacing</code></p>
+    <p><code>writing-mode</code></p>
+    <p class="highlight"><code>x</code></p>
+    <p><code>x-height</code></p>
+    <p class="highlight"><code>x1</code></p>
+    <p class="highlight"><code>x2</code></p>
+    <p><code>xChannelSelector</code></p>
+    <p><code>xlink:actuate</code></p>
+    <p><code>xlink:arcrole</code></p>
+    <p class="highlight"><code>xlink:href</code></p>
+    <p><code>xlink:role</code></p>
+    <p><code>xlink:show</code></p>
+    <p><code>xlink:title</code></p>
+    <p><code>xlink:type</code></p>
+    <p><code>xml:base</code></p>
+    <p><code>xml:lang</code></p>
+    <p><code>xml:space</code></p>
+    <p class="highlight"><code>y</code></p>
+    <p class="highlight"><code>y1</code></p>
+    <p class="highlight"><code>y2</code></p>
+    <p><code>yChannelSelector</code></p>
+    <p><code>z</code></p>
+    <p><code>zoomAndPan</code></p>
+  </div>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute" class="ref">MDN: SVG attribute reference</a>
+</section>
+
+
+<section data-background="#BE1637">
+  <h1>go on<br> a code adventure</h1>
+  <p><a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG on MDN</a></p>
+  <p><a href="http://tutorials.jenkov.com/svg/index.html">jenkov.com SVG Tutorials</a></p>
+</section>
+
+<section data-background="img/ted-svg.gif" data-background-position="top">
+</section>
+
+<section>
+   <h1 style="font-size: 2.6em; font-weight: 300">You'll probably learn something useful</h1>
+</section>
+
+
+<section>
+  <p>
+    <svg viewBox="0 0 100 100" width="250">
+    <path fill="#BE1637" d="M98.2,17.305
+       c-2.493-6.252-7.495-11.51-14.416-14.766
+       C77.667-0.34,71.076-0.686,65.085,1.073
+       C59.096,2.832,53.71,7.626,50,13.168
+       C46.291,7.626,40.905,2.832,34.916,1.073
+       S22.334-0.34,16.217,2.539
+       C9.297,5.794,4.295,11.053,1.801,17.305
+       c-2.493,6.252-2.504,13.511,0.638,20.73
+       C9.161,53.477,49.787,89.719,50,90.338
+       c0.213-0.619,40.84-36.861,47.561-52.303
+       C100.705,30.815,100.693,23.557,98.2,17.305z"/>
+    </svg>
+  </p>
+  <h1 class="main">thank you!</h1>
+  <br>
+  <div class="two-thirds">
+    <p class="main-credit"><a href="http://twitter.com/brnnbrn">@brnnbrn</a></p>
+    <p class="main-credit"><a href="http://talks.brennaobrien.com/SVGtypography">talks.brennaobrien.com/svg-typography</a></p>
+    <p class="main-credit"><a href="http://codepen.io/collection/nJGwRx/">SVG typography collection on CodePen</a></p>
+  </div>
+  <div class="third" style="text-align: right;">
+    <!-- <p class="main-credit">&nbsp;</p> -->
+    <p class="main-credit">&nbsp;</p>
+    <p class="main-credit">#SVGType 5 wow!</p>
+    <p class="main-credit">(504) 229-6828</p>
+  </div>
+</section>
+
+<!-- TODO: put online and upload to conf dropbox -->
+
+      </div> <!-- /.slides -->
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/slides.js"></script>
+
+	</body>
+</html>

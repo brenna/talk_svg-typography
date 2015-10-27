@@ -1,0 +1,95 @@
+/* Tomorrow Night Bright Theme */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* Tomorrow Comment */
+pre .comment {
+  color: #969896;
+}
+
+/* Tomorrow Red */
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .regexp,
+.ruby pre .constant,
+.xml pre .tag pre .title,
+.xml pre .pi,
+.xml pre .doctype,
+.html pre .doctype,
+.css pre .id,
+.css pre .class,
+.css pre .pseudo {
+  color: #d54e53;
+}
+
+/* Tomorrow Orange */
+pre .number,
+pre .preprocessor,
+pre .pragma,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant {
+  color: #e78c45;
+}
+
+/* Tomorrow Yellow */
+.ruby pre .class pre .title,
+.css pre .rules pre .attribute {
+  color: #e7c547;
+}
+
+/* Tomorrow Green */
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+.ruby pre .symbol,
+.xml pre .cdata {
+  color: #b9ca4a;
+}
+
+/* Tomorrow Aqua */
+pre .title,
+.css pre .hexcolor {
+  color: #70c0b1;
+}
+
+/* Tomorrow Blue */
+pre .function,
+.python pre .decorator,
+.python pre .title,
+.ruby pre .function pre .title,
+.ruby pre .title pre .keyword,
+.perl pre .sub,
+.javascript pre .title,
+.coffeescript pre .title {
+  color: #7aa6da;
+}
+
+/* Tomorrow Purple */
+pre .keyword,
+.javascript pre .function {
+  color: #c397d8;
+}
+
+pre code {
+  display: block;
+  overflow-x: auto;
+  background: black;
+  background: #282b2e;
+  color: #eaeaea;
+  padding: 0.5em;
+  -webkit-text-size-adjust: none;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex pre .formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml pre .cdata {
+  opacity: 0.5;
+}
